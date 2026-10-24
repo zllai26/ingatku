@@ -1,0 +1,52 @@
+{
+  "name": "ingatku",
+  "productName": "Ingatku",
+  "version": "0.4.0",
+  "description": "Grocery, project and daily task checklists with descriptions, pre-alerts and start/end alarms, plus notes that are always saved",
+  "main": "main.js",
+  "desktopName": "ingatku.desktop",
+  "author": "you",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "start:hidden": "electron . --hidden",
+    "test": "node test/store.test.js",
+    "dist": "electron-builder --linux AppImage deb",
+    "dist:win": "electron-builder --win nsis portable"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.example.ingatku",
+    "productName": "Ingatku",
+    "files": [
+      "main.js",
+      "preload.js",
+      "store.js",
+      "renderer/**/*",
+      "assets/**/*"
+    ],
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility",
+      "icon": "assets/icon.png",
+      "maintainer": "zilelai <zilelai26@gmail.com>"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "assets/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}

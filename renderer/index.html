@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ingatku</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <nav class="tabs" role="tablist" aria-label="Sections">
+        <button class="tab" role="tab" data-tab="grocery" aria-selected="true">Grocery <span class="count" id="count-grocery"></span></button>
+        <button class="tab" role="tab" data-tab="projects" aria-selected="false">Projects <span class="count" id="count-projects"></span></button>
+        <button class="tab" role="tab" data-tab="daily" aria-selected="false">Daily task <span class="count" id="count-daily"></span></button>
+        <button class="tab" role="tab" data-tab="favourites" aria-selected="false">Favourites <span class="count" id="count-favourites"></span></button>
+        <button class="tab" role="tab" data-tab="notes" aria-selected="false">Notes</button>
+      </nav>
+      <button type="button" id="about-btn" class="about-btn">About</button>
+    </header>
+
+    <main>
+      <section id="list-view">
+        <div id="toolbar" class="toolbar">
+          <label class="sort">Sort
+            <select id="sort" aria-label="Sort items">
+              <option value="soon">Shortest time (soonest first)</option>
+              <option value="late">Longest time (latest first)</option>
+              <option value="za">Z to A</option>
+              <option value="az">A to Z</option>
+              <option value="new">Newest first</option>
+              <option value="old">Oldest first</option>
+            </select>
+          </label>
+          <button type="button" id="collapse-all" class="secondary" hidden>Collapse all</button>
+        </div>
+
+        <ul id="items" class="items"></ul>
+        <p id="empty" class="empty" hidden></p>
+
+        <form id="add-form" class="add" autocomplete="off">
+          <input id="name" type="text" aria-label="Title" maxlength="200">
+
+          <div class="alarms">
+            <div id="start-field"></div>
+            <div id="end-field"></div>
+            <div class="alarm">
+              <label for="pre">Pre-alert (up to 1 hour)</label>
+              <select id="pre"></select>
+            </div>
+          </div>
+
+          <details id="more" class="more">
+            <summary>Add a description</summary>
+            <textarea id="desc" rows="3" aria-label="Description" placeholder="Details, comments, links. You can add a checklist and pick a colour after the item is created."></textarea>
+          </details>
+
+          <div id="add-colour"></div>
+
+          <p id="error" class="error" role="alert"></p>
+          <div class="add-actions">
+            <button type="submit" class="primary">Add item</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="notes-view" hidden>
+        <textarea id="notes" aria-label="Notes" placeholder="Write anything here. It saves as you type and is still here next time you open the app."></textarea>
+        <p id="saved" class="saved" aria-live="polite"></p>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="about" aria-labelledby="about-title">
+    <h2 id="about-title">ingatku Version <span id="about-version">0.5 (testing)</span></h2>
+    <p>Made by ZileLai</p>
+    <p>This project is in BETA Version</p>
+    <div class="dialog-actions">
+      <button type="button" id="about-close" class="primary">Close</button>
+    </div>
+  </dialog>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
