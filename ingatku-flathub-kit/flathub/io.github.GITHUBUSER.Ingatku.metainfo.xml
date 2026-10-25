@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.GITHUBUSER.Ingatku</id>
+  <name>Ingatku</name>
+  <summary>Checklists with reminders, and notes</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+  <developer id="io.github.GITHUBUSER">
+    <name>YOUR NAME</name>
+  </developer>
+
+  <description>
+    <p>
+      Ingatku keeps your grocery list, projects and daily tasks in one place and reminds you
+      when it is time. Everything is saved on your own computer.
+    </p>
+    <ul>
+      <li>Checklists for groceries, projects and daily tasks</li>
+      <li>Start and end alarms, with an optional pre-alert up to one hour before</li>
+      <li>A description and a tick-box checklist inside every item</li>
+      <li>Extend or reschedule an item in a few clicks</li>
+      <li>Pastel colours, pinned favourites and several ways to sort</li>
+      <li>A notes page that is always saved</li>
+    </ul>
+  </description>
+
+  <launchable type="desktop-id">io.github.GITHUBUSER.Ingatku.desktop</launchable>
+  <url type="homepage">https://github.com/GITHUBUSER/ingatku</url>
+  <url type="bugtracker">https://github.com/GITHUBUSER/ingatku/issues</url>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/GITHUBUSER/ingatku/main/screenshots/ingatku-main.png</image>
+      <caption>Your lists with start and end times</caption>
+    </screenshot>
+  </screenshots>
+
+  <content_rating type="oars-1.1" />
+
+  <branding>
+    <color type="primary" scheme_preference="light">#cfe0ff</color>
+    <color type="primary" scheme_preference="dark">#2a3f7a</color>
+  </branding>
+
+  <releases>
+    <release version="0.4.0" date="2026-10-25">
+      <description>
+        <p>Pastel box colours, a time picker you can type in, and sorting by shortest or longest time.</p>
+      </description>
+    </release>
+  </releases>
+</component>

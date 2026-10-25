@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Ingatku
+Comment=Checklists with reminders and notes
+Exec=ingatku
+Icon=io.github.GITHUBUSER.Ingatku
+Terminal=false
+Categories=Utility;
+Keywords=reminder;todo;checklist;grocery;notes;alarm;
