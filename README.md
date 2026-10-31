@@ -6,5 +6,14 @@ Ingatku is an app which lets you add your Groceries, Project and Daily Tasks in 
 Ingatku also provides a notes section, which you can type and think what do you want to add for your future tasks.
 
 <h2>Installation</h2>
+<h3>Debian, Ubuntu and Debian-based distros</h3>
 <p></p>
-Guide coming soon
+1. Install the .deb package in the release section.
+<br>
+2. type `sudo apt install ./ingatku-file-name`
+<br>
+3. then change its file ownership to root: `sudo chown root:root /opt/Ingatku/chrome-sandbox`
+<br>
+4. after that change its ownership permissions to 4755: `sudo chmod 4755 /opt/Ingatku/chrome-sandbox`
+<br>
+5. Finally run the program by either clicking on the app or typing `ingatku` on terminal
